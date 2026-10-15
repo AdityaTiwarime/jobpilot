@@ -1,0 +1,25 @@
+profile:
+  first_name: Aditya
+  last_name: Tiwari
+  email: at04proguys@gmail.com
+  phone: ""                     # kept out of GitHub - set PROFILE_PHONE in secrets / env
+  linkedin: https://www.linkedin.com/in/adityatiwarime/
+  github: https://github.com/AdityaTiwarime
+  location: Visakhapatnam, India
+  resume_pdf: resume.pdf        # put your resume PDF next to this file
+
+search:
+  keywords: [python, software engineer, backend, data engineer, sre, ml engineer, associate]
+  locations: [india, remote, anywhere, worldwide, bengaluru, hyderabad, chennai, pune]
+  min_score: 35
+
+sources:
+  remotive: true
+  arbeitnow: false   # mostly Germany jobs, turn on only if you want EU roles
+  # Company career boards with free public APIs. Add more slugs anytime.
+  greenhouse: [databricks, cloudflare, razorpaysoftwareprivatelimited, groww]
+  lever: [cred, meesho, zeta]
+
+cover_letter:
+  # Optional: set GEMINI_API_KEY env var (free key from aistudio.google.com)
+  model: gemini-2.5-flash
