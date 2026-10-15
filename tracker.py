@@ -6,8 +6,8 @@ from sqlalchemy import create_engine, text
 
 # Local runs use a SQLite file; on the cloud set DATABASE_URL (Neon Postgres) so data survives restarts
 DB_URL = os.getenv("DATABASE_URL", "sqlite:///jobs.db").strip()
-if DB_URL.startswith("postgres://"):
-    DB_URL = DB_URL.replace("postgres://", "postgresql://", 1)
+if DB_URL.startswith(("postgres://", "postgresql://")):
+    DB_URL = "postgresql+psycopg2://" + DB_URL.split("://", 1)[1]
 
 engine = create_engine(DB_URL, pool_pre_ping=True)
 
